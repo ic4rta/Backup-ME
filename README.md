@@ -7,10 +7,10 @@ Locate in the directory you want to back up
 -h show help
 
 
--d directory path to backup
+-d path where the compressed backup will be stored
 
 
--b path where the compressed backup will be stored
+-b directory path to backup
 
 
 -t time in seconds to perform another backup
