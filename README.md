@@ -4,6 +4,8 @@ Simple python script that makes a backup every so often
 
 Locate in the directory you want to back up
 
+-h show help
+
 
 -d directory path to backup
 
