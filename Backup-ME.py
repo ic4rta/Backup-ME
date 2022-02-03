@@ -1,3 +1,4 @@
+from ast import arg
 import os
 import sys
 import argparse
@@ -16,17 +17,20 @@ def main():
     sys.stdout.write(str(backup(args)))
 
 def backup(args):
-    if os.path.exists(args.d):
-        if os.path.exists(args.b):
-            while True:
-                os.system("clear")
-                os.system(f"tar -cpzf {args.d}/{nombre} {args.b}")
-                print(f"Se creo el backup... El siguiente en {args.t} segundos")
-                time.sleep(args.t)
+    if not len(sys.argv) > 0:
+        if os.path.exists(args.d):
+            if os.path.exists(args.b):
+                while True:
+                    os.system("clear")
+                    os.system(f"tar -cpzf {args.d}/{nombre} {args.b}")
+                    print(f"Se creo el backup... El siguiente en {args.t} segundos")
+                    time.sleep(args.t)
+            else:
+                print("El directorio no existe")
         else:
-            print("El directorio no existe")
+            print("El directorio destino no existe")
     else:
-        print("El directorio destino no existe")
+        print("No has ingresado ningun parametro, -h para mostrar el menu de ayuda")
 
 if __name__ == "__main__":
     main()
