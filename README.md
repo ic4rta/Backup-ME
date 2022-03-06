@@ -1,19 +1,18 @@
 # Backup-ME
-Simple python script that makes a backup every so often
-# Usage
+Script que crea un backup de un directorio cada cierto tiempo
+# Uso
 
-Locate in the directory you want to back up
-
--h show help
-
-
--d path where the compressed backup will be stored
+Ubicate en el directorio al que quieras hacer backup
+-h muestra la ayuda
 
 
--b directory path to backup
+-d ruta donde se va almacenar el backuo
 
 
--t time in seconds to perform another backup
+-b ruta del directorio para hacer backup
 
 
-Example: python3 Backup-ME.py -b example/ -d /home/omarh/Documents/ -t 30
+-t tiempo en segundos para el otro backup
+
+
+Ejemplo: python3 Backup-ME.py -b example/ -d /home/usuario/Documents/ -t 30
